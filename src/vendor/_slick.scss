@@ -1,0 +1,103 @@
+@import '~slick-carousel/slick/slick.scss';
+
+.slick-arrow {
+	position: absolute;
+	top: 50%;
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 0;
+	color: transparent;
+	border: 0;
+	border-radius: 50%;
+	background: transparent;
+	transform: translateY(-50%);
+	transition: $transition-base;
+	cursor: pointer;
+	outline: 0 !important;
+
+	&:after {
+		line-height: 1;
+		font-family: $font-family-icon;
+		font-size: 25px;
+		font-weight: 400;
+		display: block;
+		color: $color-primary;
+		transition: $transition-base color;
+		content: '\e905';
+	}
+
+	&.slick-prev {
+		left: 0;
+
+		&:after {
+			content: '\e904';
+		}
+	}
+
+	&.slick-next {
+		right: 0;
+	}
+
+	&.slick-disabled {
+		border-color: $color-primary;
+		pointer-events: none;
+		cursor: inherit;
+		opacity: 0.5;
+	}
+}
+
+.slick-dots {
+	margin: 15px 0  0;
+	display: flex !important;
+	justify-content: center;
+	width: 100%;
+	text-align: center;
+	list-style: none;
+
+	li {
+		margin: 0 7px !important;
+		position: relative;
+		list-style: none;
+		transition: $transition-base;
+		cursor: pointer;
+
+		&:before {
+			display: none;
+		}
+
+		&:first-of-type {
+			margin-left: 0;
+		}
+
+		&:last-of-type {
+			margin-right: 0;
+		}
+
+		button {
+			display: block;
+			width: 16px;
+			height: 16px;
+			font-size: 0;
+			border: 0;
+			border-radius: 50%;
+			background: $color-secondary;
+			outline: none;
+			@include max-screen($breakpoint-tablet){
+				width: 12px;
+				height: 12px;
+			}
+			@include max-screen($breakpoint-phone){
+				width: 10px;
+				height: 10px;
+			}
+		}
+
+		&.slick-active {
+			button {
+				background: $color-primary;
+			}
+		}
+	}
+}

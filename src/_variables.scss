@@ -1,0 +1,100 @@
+// Table of Content
+// ===============================================
+// # General
+// # Grid
+// # Typography */
+
+// # General
+// =============================================== */
+$image-path: '../img/';
+
+// Page
+$page-bg: #fff;
+
+// Width
+$width-base: 1240px; // Mainly used for centering
+
+// Gutters
+$gutter-base: 30px;
+$gutter-top: 0;
+$gutter-right: $gutter-base;
+$gutter-bottom: $gutter-base;
+$gutter-left: $gutter-base;
+$gutter-side: 15px; // Used when base width is reached
+$gutter-side-tablet: 15px; // Used when base width is reached
+$gutter-side-phone: 15px; // Used when base width is reached
+
+// Colors
+$color-error: #d92b25;
+$color-pink: #E6586F;
+$color-pink-dark: #E24B6B;
+$color-pink-alt: #E66769;
+$color-pink-light: #F37B7A;
+$color-warning: #F7921E;
+$color-purple: #9C3C9F;
+$color-purple-alt: #984B93;
+$color-primary: #1E1B36;
+$color-secondary: #302D39;
+$color-secondary-light: #4D4C5B;
+$color-secondary-light-alt: #6A696D;
+$color-info: #3CC1B0;
+$color-info-light: #43DDBF;
+$color-success: #5cb85c;
+$color-white: #fff;
+$color-black: #000;
+$color-light: #E3E3E8;
+$color-light-alt: #E9E9E9;
+
+// # Grid
+// =============================================== */
+
+// General
+$grid-helpers: true;
+
+// Columns
+$grid-columns: 12; // Number of columns in the grid system
+$gutter: 1em; // Padding, to be divided by two and applied to the left and right of all columns
+$max-width: $width-base;
+
+// Breakpoints
+$breakpoint-small: 575px;
+$breakpoint-phone: 767px;
+$breakpoint-tablet: 991px;
+$breakpoint-desktop: 1199px;
+$breakpoint-desktop-alt: 1279px;
+$breakpoint-desktop-large: 1439px;
+$breakpoint-desktop-xlarge: 1599px;
+
+// # Animations
+// =============================================== */
+
+$transition-base: 0.3s ease-in-out;
+
+// # Typography
+// =============================================== */
+
+$text-color-base: #302D39;
+$text-color-base-alt: #323232;
+
+$link-color-base: $color-warning;
+$link-decoration-base: none;
+$link-hover-color-base: $text-color-base;
+$link-hover-decoration-base: none;
+
+$font-family-base: 'Kohinoor Bangla', sans-serif;
+$font-family-icon: 'icomoon';
+$font-size-base: 18px;
+$font-size-h1: 60px;
+$font-size-h2: 40px;
+$font-size-h3: 36px;
+$font-size-h4: 30px;
+$font-size-h5: 24px;
+$font-size-h6: 18px;
+
+$line-height-base: 1.5; // Always use integer no px or rem values
+
+$heading-margin: 0 0 20px 0;
+$heading-font-family: inherit;
+$heading-font-weight: 500;
+$heading-line-height: 1.1;
+$heading-color: inherit;

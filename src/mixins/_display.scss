@@ -1,0 +1,92 @@
+// Table of Content
+// ===============================================
+// # Variables
+// # Mixin */
+
+// # Variables
+// =============================================== */
+// No local variables available
+
+// # Mixin
+// =============================================== */
+
+@mixin display($variant) {
+	margin: $heading-margin;
+	font-family: $heading-font-family;
+	font-weight: $heading-font-weight;
+	line-height: $heading-line-height;
+	color: $heading-color;
+	@include max-screen($width-base) {
+		@if $variant == 'h1' {
+			font-size: $font-size-h1 - 5;
+		} @else if $variant == 'h2' {
+			font-size: $font-size-h2 - 2;
+		} @else if $variant == 'h3' {
+			font-size: $font-size-h3 - 2;
+		}
+	}
+	@include max-screen($breakpoint-desktop) {
+		margin-bottom: 15px;
+
+		@if $variant == 'h1' {
+			font-size: $font-size-h1 - 10;
+		} @else if $variant == 'h2' {
+			font-size: $font-size-h2 - 4;
+		} @else if $variant == 'h3' {
+			font-size: $font-size-h3 - 4;
+		} @else if $variant == 'h4' {
+			font-size: $font-size-h4 - 2;
+		} @else if $variant == 'h5' {
+			font-size: $font-size-h5 - 1;
+		}
+	}
+	@include max-screen($breakpoint-tablet) {
+		margin-bottom: 10px;
+
+		@if $variant == 'h1' {
+			font-size: $font-size-h1 - 20;
+		} @else if $variant == 'h2' {
+			font-size: $font-size-h2 - 6;
+		} @else if $variant == 'h3' {
+			font-size: $font-size-h3 - 6;
+		} @else if $variant == 'h4' {
+			font-size: $font-size-h4 - 4;
+		} @else if $variant == 'h5' {
+			font-size: $font-size-h5 - 2;
+		} @else if $variant == 'h6' {
+			font-size: $font-size-h6 - 1;
+		}
+	}
+	@include max-screen($breakpoint-phone) {
+		@if $variant == 'h1' {
+			font-size: $font-size-h1 - 30;
+		} @else if $variant == 'h2' {
+			font-size: $font-size-h2 - 12;
+		} @else if $variant == 'h3' {
+			font-size: $font-size-h3 - 12;
+		} @else if $variant == 'h4' {
+			font-size: $font-size-h4 - 8;
+		} @else if $variant == 'h5' {
+			font-size: $font-size-h5 - 4;
+		} @else if $variant == 'h6' {
+			font-size: $font-size-h6 - 2;
+		}
+	}
+	@if $variant == 'h1' {
+		line-height: 1.35;
+		font-size: $font-size-h1;
+	} @else if $variant == 'h2' {
+		font-size: $font-size-h2;
+	} @else if $variant == 'h3' {
+		line-height: 1.45;
+		font-weight: 400;
+		font-size: $font-size-h3;
+	} @else if $variant == 'h4' {
+		font-size: $font-size-h4;
+	} @else if $variant == 'h5' {
+		line-height: 1.5;
+		font-size: $font-size-h5;
+	} @else if $variant == 'h6' {
+		font-size: $font-size-h6;
+	}
+}

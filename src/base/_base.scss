@@ -1,0 +1,142 @@
+// Table of Content
+// ===============================================
+// # Variables
+// # Elements */
+
+// # Variables
+// =============================================== */
+// No local variables available
+
+// # Elements
+// =============================================== */
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+
+	&:before,
+	&:after {
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+	}
+}
+
+html,
+body {
+	background-color: $color-secondary-light;
+	font-family: $font-family-base;
+	font-size: $font-size-base;
+	line-height: $line-height-base;
+	color: $text-color-base;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	@include max-screen($breakpoint-tablet){
+		font-size: $font-size-base - 1;
+	}
+	@include max-screen($breakpoint-phone){
+		font-size: $font-size-base - 2;
+	}
+
+	&.is-active {
+		@include max-screen($breakpoint-tablet){
+			overflow: hidden;
+		}
+	}
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+a {
+	text-decoration: $link-decoration-base;
+	color: $link-color-base;
+	transition: $transition-base;
+
+	&:hover {
+		text-decoration: $link-hover-decoration-base;
+		color: $link-hover-color-base;
+	}
+}
+
+h1 {
+	@include display('h1');
+}
+
+h2 {
+	@include display('h2');
+}
+
+h3 {
+	@include display('h3');
+}
+
+h4 {
+	@include display('h4');
+}
+
+h5 {
+	@include display('h5');
+}
+
+h6 {
+	@include display('h6');
+}
+
+p {
+	margin-bottom: 20px;
+}
+
+strong {
+	font-weight: bold;
+}
+
+em {
+	font-style: italic;
+}
+
+dfn {
+	@extend strong;
+	@extend em;
+}
+
+sup,
+sub {
+	line-height: 0;
+}
+
+.is-mobile {
+	@include min-screen($breakpoint-phone + 1px) {
+		display: none;
+	}
+}
+
+.is-desktop {
+	@include max-screen($breakpoint-phone) {
+		display: none;
+	}
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.container {
+	padding-left: calc((100% - #{$width-base}) / 2);
+	padding-right: calc((100% - #{$width-base}) / 2);
+	@include max-screen($width-base + ( $gutter-side * 2 )) {
+		padding-left: $gutter-side;
+		padding-right: $gutter-side;
+	}
+}

@@ -1,0 +1,371 @@
+// Table of Content
+// ===============================================
+// # Variables
+// # Elements */
+
+// # Variables
+// =============================================== */
+$button-padding: 5px 25px !default;
+
+$button-height: 50px !default;
+
+$button-font-family: $font-family-base !default;
+$button-font-size: $font-size-base !default;
+$button-font-weight: 700 !default;
+
+$button-color: #fff !default;
+$button-color-hover: #fff !default;
+$button-color-disabled: #999 !default;
+
+$button-border-size: 1px !default;
+$button-border-style: solid !default;
+$button-border-color: $color-warning !default;
+$button-border-color-hover: darken($color-warning, 5%) !default;
+$button-border-color-disabled: #666 !default;
+$button-border-radius: 10px !default;
+
+$button-bg: $color-warning !default;
+$button-bg-hover: darken($color-warning, 5%) !default;
+$button-bg-disabled: #efefef !default;
+
+// # Elements
+// =============================================== */
+
+.button {
+	padding: $button-padding;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	height: $button-height;
+	font-family: $button-font-family;
+	font-size: $button-font-size;
+	font-weight: $button-font-weight;
+	line-height: normal;
+	white-space: nowrap;
+	text-align: center;
+	color: $button-color;
+	text-transform: uppercase;
+	vertical-align: middle;
+	border: $button-border-size $button-border-style $button-border-color;
+	border-radius: $button-border-radius;
+	background: $button-bg;
+	transition: $transition-base;
+	user-select: none;
+	touch-action: manipulation;
+	cursor: pointer;
+	@include max-screen($breakpoint-desktop) {
+		height: 45px;
+		padding: 5px 15px;
+		font-size: 16px;
+	}
+	@include max-screen($breakpoint-phone) {
+		height: 40px;
+		border-radius: 8px;
+	}
+
+	&:hover,
+	&[type='submit']:hover,
+	&[type='reset']:hover,
+	&[type='button']:hover,
+	&:focus,
+	&.is-focused {
+		text-decoration: none;
+		color: $button-color-hover;
+		border-color: $button-border-color-hover;
+		background-color: $button-bg-hover;
+	}
+
+	&:active,
+	&.is-active {
+		background-image: none;
+	}
+
+	&:disabled,
+	&.is-disabled {
+		color: $button-color-disabled;
+		background-color: $button-bg-disabled;
+	}
+
+	& + .button {
+		margin-left: 28px;
+	}
+
+	&--outline {
+		color: $color-warning;
+		background: transparent;
+	}
+
+	&--arrow {
+		&:after {
+			margin-left: 15px;
+			font-size: 70%;
+			content: '\e90e';
+			font-weight: 400;
+			font-family: $font-family-icon;
+			@include max-screen($breakpoint-desktop) {
+				margin-left: 10px;
+			}
+		}
+	}
+
+	&--primary {
+		background: $color-primary;
+		border-color: $color-primary;
+
+		&:hover,
+		&[type='submit']:hover,
+		&[type='reset']:hover,
+		&[type='button']:hover,
+		&:focus,
+		&.is-focused {
+			border-color: darken($color-primary, 5%);
+			background-color: darken($color-primary, 5%);
+		}
+	}
+
+	&--secondary {
+		background: $color-secondary;
+		border-color: $color-secondary;
+
+		&:hover,
+		&[type='submit']:hover,
+		&[type='reset']:hover,
+		&[type='button']:hover,
+		&:focus,
+		&.is-focused {
+			border-color: darken($color-secondary, 5%);
+			background-color: darken($color-secondary, 5%);
+		}
+	}
+
+	&--chat {
+		padding-left: 20px;
+		padding-right: 20px;
+		@include max-screen($breakpoint-tablet) {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+
+		&:before {
+			content: '';
+			margin-right: 20px;
+			width: 27px;
+			height: 24px;
+			@include background-image(chat, svg, center, no-repeat, 100%);
+			@include max-screen($breakpoint-tablet) {
+				margin-right: 10px;
+			}
+			@include max-screen($breakpoint-phone) {
+				width: 20px;
+				height: 19px;
+			}
+		}
+	}
+
+	&--white {
+		color: $color-warning;
+		background: $color-white;
+		border-color: $color-white;
+
+		.theme-pink & {
+			color: $color-pink;
+		}
+
+		.theme-cyan & {
+			color: $color-info;
+		}
+
+		&:hover,
+		&[type='submit']:hover,
+		&[type='reset']:hover,
+		&[type='button']:hover,
+		&:focus,
+		&.is-focused {
+			color: $color-white;
+			border-color: $color-white;
+			background-color: transparent;
+
+			.theme-pink & {
+				color: $color-white;
+			}
+
+			.theme-cyan & {
+				color: $color-white;
+			}
+		}
+	}
+
+	&--white-outline {
+		border-color: $color-white;
+		background: transparent;
+		color: $color-white;
+
+		&:hover,
+		&[type='submit']:hover,
+		&[type='reset']:hover,
+		&[type='button']:hover,
+		&:focus,
+		&.is-focused {
+			color: $color-warning;
+			border-color: $color-white;
+			background-color: $color-white;
+
+			.theme-pink & {
+				color: $color-pink;
+			}
+
+			.theme-cyan & {
+				color: $color-info;
+			}
+		}
+	}
+
+	&--info {
+		border-color: $color-info;
+		background: $color-info;
+
+		&:hover,
+		&[type='submit']:hover,
+		&[type='reset']:hover,
+		&[type='button']:hover,
+		&:focus,
+		&.is-focused {
+			color: $color-white;
+			border-color: darken($color-info, 5%);
+			background-color: darken($color-info, 5%);
+		}
+	}
+
+	&--purple {
+		border-color: $color-purple;
+		background: $color-purple;
+
+		&:hover,
+		&[type='submit']:hover,
+		&[type='reset']:hover,
+		&[type='button']:hover,
+		&:focus,
+		&.is-focused {
+			color: $color-white;
+			border-color: darken($color-purple, 5%);
+			background-color: darken($color-purple, 5%);
+		}
+	}
+
+	&--purple-alt {
+		border-color: $color-purple-alt;
+		background: $color-purple-alt;
+
+		&:hover,
+		&[type='submit']:hover,
+		&[type='reset']:hover,
+		&[type='button']:hover,
+		&:focus,
+		&.is-focused {
+			color: $color-white;
+			border-color: darken($color-purple-alt, 5%);
+			background-color: darken($color-purple-alt, 5%);
+		}
+	}
+
+	&--pink {
+		border-color: $color-pink;
+		background: $color-pink;
+
+		&:hover,
+		&[type='submit']:hover,
+		&[type='reset']:hover,
+		&[type='button']:hover,
+		&:focus,
+		&.is-focused {
+			color: $color-white;
+			border-color: darken($color-pink, 5%);
+			background-color: darken($color-pink, 5%);
+		}
+	}
+
+	&--pink-alt {
+		border-color: $color-pink-alt;
+		background: $color-pink-alt;
+
+		&:hover,
+		&[type='submit']:hover,
+		&[type='reset']:hover,
+		&[type='button']:hover,
+		&:focus,
+		&.is-focused {
+			color: $color-white;
+			border-color: darken($color-pink-alt, 5%);
+			background-color: darken($color-pink-alt, 5%);
+		}
+	}
+
+	&--more-white,
+	&--more {
+		height: auto;
+		border: 0;
+		padding: 0;
+		text-transform: inherit;
+		border-radius: 0;
+		background: transparent;
+		color: $text-color-base;
+		font-weight: 600;
+		font-size: 16px;
+
+		&:before {
+			content: '\e907';
+			font-size: 90%;
+			font-weight: 400;
+			margin-right: 10px;
+			font-family: $font-family-icon;
+		}
+
+		&:hover,
+		&[type='submit']:hover,
+		&[type='reset']:hover,
+		&[type='button']:hover,
+		&:focus,
+		&.is-focused {
+			color: $color-warning;
+			background: transparent;
+		}
+	}
+
+	&--more-white {
+		color: $color-white;
+	}
+
+	&--gradient {
+		overflow: hidden;
+		position: relative;
+
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			border-radius: 10px;
+			width: 100%;
+			height: 100%;
+			mix-blend-mode: color;
+			transition: $transition-base opacity;
+			background: -webkit-linear-gradient(0deg, $color-warning, $color-secondary);
+			@include max-screen($breakpoint-phone) {
+				border-radius: 8px;
+			}
+		}
+
+		&:focus,
+		&:hover {
+			&:before {
+				opacity: 0;
+			}
+		}
+	}
+
+	&--sm {
+		height: 35px;
+		font-size: 16px;
+		border-radius: 5px;
+	}
+}

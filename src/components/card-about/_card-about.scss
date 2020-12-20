@@ -1,0 +1,36 @@
+.card-about {
+	width: 100%;
+	display: block;
+	text-align: center;
+	color: $text-color-base-alt;
+
+	img {
+		width: 100%;
+		margin-bottom: 35px;
+		border-radius: 5px;
+		@include max-screen($breakpoint-desktop){
+			margin-bottom: 15px;
+		}
+	}
+
+	&__content {
+		padding: 0 15px;
+		@include max-screen($breakpoint-desktop){
+			padding: 0;
+		}
+
+		p {
+			font-size: 14px;
+			margin-bottom: 10px;
+		}
+	}
+
+	&__content-title {
+		@include display(h5);
+		font-weight: 600;
+		margin-bottom: 17px;
+		@include max-screen($breakpoint-tablet){
+			margin-bottom: 10px;
+		}
+	}
+}

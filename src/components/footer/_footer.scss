@@ -1,0 +1,308 @@
+
+.footer {
+	overflow: hidden;
+	color: $color-white;
+	width: 100%;
+	position: relative;
+
+	&__curve {
+		top: 0;
+		left: 0;
+		width: 100%;
+		position: absolute;
+
+		img {
+			width: 100%;
+		}
+
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			left: 0;
+			top: calc(100% - 3px);
+			width: 100%;
+			bottom: -1000px;
+			background: $color-secondary;
+		}
+	}
+
+	&__button {
+		z-index: 1;
+		padding-top: 12px;
+		text-align: right;
+		position: relative;
+		@include max-screen($breakpoint-tablet){
+			padding-top: 5px;
+		}
+		@include max-screen($breakpoint-phone){
+			text-align: left;
+			padding-top: 40px;
+		}
+	}
+
+	&__main {
+		z-index: 1;
+		display: flex;
+		flex-wrap: wrap;
+		position: relative;
+		padding-top: 120px;
+		font-size: 15px;
+		font-weight: 500;
+		@include max-screen($breakpoint-desktop){
+			padding-top: 90px;
+		}
+		@include max-screen($breakpoint-tablet){
+			padding-top: 60px;
+			padding-bottom: 50px;
+		}
+		@include max-screen($breakpoint-phone){
+			padding-top: 30px;
+		}
+	}
+
+	&__advice-title,
+	&__menu-title,
+	&__contact-title {
+		@include display(h5);
+		margin-bottom: 35px;
+		@include max-screen($breakpoint-tablet){
+			margin-bottom: 20px;
+		}
+		@include max-screen($breakpoint-phone){
+			margin-bottom: 10px;
+		}
+	}
+
+	&__menu-title,
+	&__contact-title {
+		color: $color-secondary-light-alt;
+	}
+
+	&__contact {
+		width: 18%;
+		padding-right: 20px;
+		@include max-screen($breakpoint-tablet){
+			width: 33.3%;
+		}
+		@include max-screen($breakpoint-phone){
+			width: 50%;
+			margin-bottom: 30px;
+		}
+		@include max-screen($breakpoint-small){
+			width: 100%;
+			padding-right: 0;
+		}
+
+		a {
+			color: $color-white;
+
+			&:hover {
+				color: $link-color-base;
+			}
+		}
+	}
+
+	&__contact-address {
+		font-style: normal;
+		line-height: 2.2;
+		margin-top: -3px;
+		margin-bottom: 5px;
+	}
+
+	&__contact-tel {
+		display: inline-block;
+		margin-bottom: 12px;
+	}
+
+	&__menu {
+		width: 19%;
+		padding-right: 20px;
+		@include max-screen($breakpoint-desktop){
+			width: 22%;
+		}
+		@include max-screen($breakpoint-tablet){
+			width: 33.3%;
+		}
+		@include max-screen($breakpoint-phone){
+			width: 50%;
+			margin-bottom: 30px;
+		}
+		@include max-screen($breakpoint-small){
+			width: 100%;
+			padding-right: 0;
+		}
+	}
+
+	&__menu-item {
+		margin-bottom: 12px;
+
+		&.is-active {
+			.footer__menu-link {
+				color: $link-color-base;
+			}
+		}
+	}
+
+	&__menu-link {
+		color: $color-white;
+
+		&:hover {
+			color: $link-color-base;
+		}
+	}
+
+	&__advice {
+		width: 29%;
+		margin-left: auto;
+		@include max-screen($breakpoint-tablet){
+			width: 50%;
+			margin-right: auto;
+			margin-top: 30px;
+		}
+		@include max-screen($breakpoint-phone){
+			margin-top: 0;
+		}
+		@include max-screen($breakpoint-small){
+			width: 100%;
+		}
+	}
+
+	&__advice-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		@include max-screen($breakpoint-phone){
+			padding-top: 10px;
+		}
+	}
+
+	&__advice-image {
+		width: 77px;
+
+		img {
+			max-width: 100%;
+			border-radius: 50%;
+		}
+	}
+
+	&__advice-content {
+		margin-top: -5px;
+		font-size: 16px;
+		padding-left: 25px;
+		width: calc(100% - 77px);
+
+		p {
+			margin-bottom: 8px;
+		}
+	}
+
+	&__advice-tel {
+		font-size: 24px;
+		font-weight: 600;
+		@include max-screen($breakpoint-phone){
+			font-size: 20px;
+		}
+
+		&:hover {
+			color: $color-white;
+		}
+	}
+
+	&__logo {
+		width: 100%;
+		display: flex;
+		padding-top: 90px;
+		padding-bottom: 15px;
+		justify-content: flex-end;
+		@include max-screen($breakpoint-desktop){
+			padding-top: 50px;
+		}
+		@include max-screen($breakpoint-tablet){
+			width: 50%;
+			align-self: flex-end;
+			padding-bottom: 0;
+		}
+		@include max-screen($breakpoint-phone){
+			width: 100%;
+			padding-top: 20px;
+		}
+		@include max-screen($breakpoint-small){
+			justify-content: flex-start;
+		}
+	}
+
+	&__copyright {
+		z-index: 1;
+		display: flex;
+		flex-wrap: wrap;
+		font-size: 13px;
+		color: $color-light;
+		align-items: center;
+		justify-content: space-between;
+		position: relative;
+		padding-top: 27px;
+		padding-bottom: 27px;
+		background: $color-secondary-light;
+		@include max-screen($breakpoint-phone){
+			padding-top: 40px;
+			padding-bottom: 20px;
+		}
+
+		p {
+			margin-bottom: 0;
+			@include max-screen($breakpoint-phone){
+				width: 100%;
+				text-align: center;
+			}
+		}
+	}
+
+	&__copyright-logo {
+		position: absolute;
+		left: 50%;
+		top: 0;
+		width: 81px;
+		transform: translate(-50%, -50%);
+		@include max-screen($breakpoint-phone){
+			width: 70px;
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+
+	&__copyright-list {
+		display: flex;
+		flex-wrap: wrap;
+		@include max-screen($breakpoint-phone){
+			width: 100%;
+			justify-content: center;
+			text-align: center;
+		}
+	}
+
+	&__copyright-item {
+		&+li {
+			&:before {
+				content: '|';
+				margin: 0 6px 0 8px;
+			}
+		}
+
+		&.is-active {
+			.footer__copyright-link {
+				color: $link-color-base;
+			}
+		}
+	}
+
+	&__copyright-link {
+		color: $color-light;
+
+		&:hover {
+			color: $link-color-base;
+		}
+	}
+}

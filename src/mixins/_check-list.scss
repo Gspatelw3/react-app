@@ -1,0 +1,39 @@
+// Table of Content
+// ===============================================
+// # Variables
+// # Mixin */
+
+// # Variables
+// =============================================== */
+// No local variables available
+
+// # Mixin
+// =============================================== */
+
+@mixin check-list($icon-color: $color-info, $font-size: inherit ) {
+	li {
+		font-size: $font-size;
+		position: relative;
+		padding-left: 45px;
+		@include max-screen($breakpoint-desktop){
+			padding-left: 35px;
+		}
+		@include max-screen($breakpoint-phone){
+			padding-left: 25px;
+		}
+
+		&:before {
+			content: '\e910';
+			font-weight: 400;
+			font-size: 70%;
+			color: $icon-color;
+			font-family: $font-family-icon;
+			position: absolute;
+			left: 0;
+			top: 7px;
+			@include max-screen($breakpoint-phone){
+				top: 5px;
+			}
+		}
+	}
+}

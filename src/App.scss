@@ -1,0 +1,26 @@
+@import 'variables';
+
+@import './mixins/media';
+@import './mixins/check-list';
+@import './mixins/display';
+@import './mixins/background-image';
+
+@import './base/base';
+@import './base/buttons';
+@import './base/form';
+@import './base/reset';
+@import './base/app';
+
+@import './vendor/slick';
+
+@import './components/header/header';
+@import './components/banner/banner';
+@import './components/process/process';
+@import './components/about-intro/about-intro';
+@import './components/card-about/card-about';
+@import './components/review/review';
+@import './components/customer/customer';
+@import './components/footer/footer';
+
+@import './fonts/icons/icons';
+@import './fonts/kohinoor/kohinoor';
