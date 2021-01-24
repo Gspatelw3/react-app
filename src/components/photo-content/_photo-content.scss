@@ -1,0 +1,121 @@
+.photo-content {
+    @include background-image(pat, png, center bottom, repeat-x);
+    @include min-screen($breakpoint-desktop + 1) {
+        padding-bottom: 135px;
+    }
+
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        flex-direction: row-reverse;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        @include max-screen($breakpoint-tablet) {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        &:nth-child(even) {
+            flex-direction: inherit;
+
+            .photo-content__content-align {
+                @include max-screen($breakpoint-tablet) {
+                    padding-left: 15px;
+                    padding-right: 0;
+                }
+                @include max-screen($breakpoint-phone) {
+                    padding-left: 0;
+                }
+            }
+
+            .photo-content__photo-element {
+                left: 50%;
+
+                img {
+                    float: right;
+                }
+            }
+        }
+    }
+
+    &__photo {
+        width: 50%;
+        position: relative;
+        @include max-screen($breakpoint-phone) {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__photo-element {
+        position: absolute;
+        left: 60%;
+        top: -20px;
+        max-width: 350px;
+        transform: translateX(-50%);
+        @include max-screen($breakpoint-desktop) {
+            max-width: 260px;
+        }
+
+        img {
+            max-width: none;
+            @include max-screen($breakpoint-desktop) {
+                width: 750px;
+            }
+            @include max-screen($breakpoint-phone) {
+                width: 600px;
+            }
+        }
+    }
+
+    &__photo-picture {
+        z-index: 1;
+        position: relative;
+
+        img {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+    }
+
+    &__content {
+        width: 50%;
+        @include max-screen($breakpoint-phone) {
+            width: 100%;
+        }
+
+        h5 {
+            font-weight: 600;
+            color: $color-info;
+        }
+
+        p {
+            margin-bottom: 30px;
+        }
+
+        ul {
+            @include check-list;
+            font-weight: 600;
+            color: $text-color-base-alt;
+
+            li {
+                margin-bottom: 9px;
+            }
+        }
+    }
+
+    &__content-align {
+        max-width: 500px;
+        margin: 0 auto;
+        padding-left: 15px;
+        padding-right: 15px;
+        @include max-screen($breakpoint-tablet) {
+            padding-left: 0;
+        }
+        @include max-screen($breakpoint-phone) {
+            max-width: 100%;
+            padding-right: 0;
+        }
+    }
+}

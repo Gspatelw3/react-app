@@ -1,0 +1,24 @@
+.card-benefit {
+	picture {
+		display: flex;
+		align-items: center;
+		padding: 15px;
+		border-radius: 10px;
+		justify-content: center;
+		height: 200px;
+		margin-bottom: 20px;
+		background: $color-light-alt;
+		@include max-screen($breakpoint-phone){
+			margin-bottom: 10px;
+		}
+
+		img {
+			max-height: 100%;
+			max-width: 100%;
+		}
+	}
+
+	p {
+		margin-bottom: 0;
+	}
+}

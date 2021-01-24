@@ -9,10 +9,10 @@
 @import './base/buttons';
 @import './base/form';
 @import './base/reset';
-@import './base/app';
 
 @import './vendor/slick';
 
+@import './components/wrapper/wrapper';
 @import './components/header/header';
 @import './components/banner/banner';
 @import './components/process/process';
@@ -20,6 +20,10 @@
 @import './components/card-about/card-about';
 @import './components/review/review';
 @import './components/customer/customer';
+@import './components/intro/intro';
+@import './components/photo-content/photo-content';
+@import './components/card-benefit/card-benefit';
+@import './components/benefit/benefit';
 @import './components/footer/footer';
 
 @import './fonts/icons/icons';

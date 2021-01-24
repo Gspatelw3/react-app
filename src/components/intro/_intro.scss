@@ -1,0 +1,13 @@
+.intro {
+	margin-top: 60px;
+	margin-bottom: 40px;
+	display: block;
+	@include max-screen($breakpoint-desktop){
+		margin-top: 30px;
+		margin-bottom: 20px;
+	}
+
+	&__wrap {
+		max-width: 780px;
+	}
+}
