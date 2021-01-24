@@ -8,7 +8,7 @@ const PhotoContent = () => {
                     <div className="photo-content__photo-element"></div>
 
                     <div className="photo-content__photo-picture">
-                        <img src="https://test.project-example.com/20201103-454/wp-content/uploads/photo-content01.png" alt="" />
+                        <img src={process.env.PUBLIC_URL + '/img/photo-content01.png'} alt="" />
                     </div>
                 </div>
 
@@ -29,7 +29,7 @@ const PhotoContent = () => {
                     <div className="photo-content__photo-element"></div>
 
                     <div className="photo-content__photo-picture">
-                        <img src="https://test.project-example.com/20201103-454/wp-content/uploads/photo-content02.png" alt="" />
+                        <img src={process.env.PUBLIC_URL + '/img/photo-content02.png'} alt="" />
                     </div>
                 </div>
 
@@ -50,7 +50,7 @@ const PhotoContent = () => {
                     <div className="photo-content__photo-element"></div>
 
                     <div className="photo-content__photo-picture">
-                        <img src="https://test.project-example.com/20201103-454/wp-content/uploads/photo-content03.png" alt="" />			
+                        <img src={process.env.PUBLIC_URL + '/img/photo-content03.png'} alt="" />
                     </div>
                 </div>
 

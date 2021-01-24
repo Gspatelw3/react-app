@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 class Header extends Component {
     componentDidMount() {
@@ -35,8 +35,8 @@ class Header extends Component {
         return (
             <header className="header container" data-component="header">
                 <Link className="header__logo" to="/">
-                    <img src={process.env.PUBLIC_URL + '/img/logo.svg'} />
-                    <img src={process.env.PUBLIC_URL + '/img/logo-sticky.svg'} />
+                    <img src={process.env.PUBLIC_URL + '/img/logo.svg'} alt="" />
+                    <img src={process.env.PUBLIC_URL + '/img/logo-sticky.svg'} alt="" />
                 </Link>
 
                 <div className="header__menu">

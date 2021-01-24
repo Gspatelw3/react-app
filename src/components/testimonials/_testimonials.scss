@@ -1,0 +1,162 @@
+.testimonials {
+	padding-top: 40px;
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	@include max-screen($breakpoint-desktop){
+		padding-top: 20px;
+	}
+
+	&__quote {
+		width: 50%;
+		margin-top: 50px;
+		padding-right: 30px;
+		margin-bottom: 30px;
+		@include max-screen($breakpoint-tablet){
+			margin-top: 20px;
+		}
+		@include max-screen($breakpoint-phone){
+			width: 100%;
+			padding-right: 0;
+		}
+	}
+
+	&__quote-wrap {
+		max-width: 520px;
+	}
+
+	&__quote-title {
+		@include display(h3);
+		position: relative;
+		margin-bottom: 30px;
+		padding: 20px 0 0 50px;
+		@include max-screen($breakpoint-tablet){
+			padding: 5px 0 0 30px;
+			margin-bottom: 15px;
+		}
+
+		&:before {
+			content: '\e915';
+			color: $color-warning;
+			font-size: 80%;
+			font-family: $font-family-icon;
+			position: absolute;
+			left: 0;
+			top: 0;
+			@include max-screen($breakpoint-tablet){
+				font-size: 70%;
+			}
+
+			.theme-purple & {
+				color: $color-purple;
+			}
+
+			.theme-cyan & {
+				color: $color-info;
+			}
+		}
+	}
+
+	&__quote-slider {
+		padding-left: 50px;
+		@include max-screen($breakpoint-tablet){
+			padding-left: 30px;
+		}
+	}
+
+	&__quote-slide {
+		p {
+			margin-bottom: 10px;
+		}
+
+		strong {
+			color: $color-warning;
+
+			.theme-purple & {
+				color: $color-purple;
+			}
+
+			.theme-cyan & {
+				color: $color-info;
+			}
+		}
+	}
+
+	&__content {
+		width: 50%;
+		padding-left: 30px;
+		padding-top: 20px;
+		position: relative;
+		padding-bottom: 180px;
+		@include max-screen($breakpoint-desktop-large){
+			padding-bottom: 215px;
+		}
+		@include max-screen(1368px){
+			padding-left: 0;
+			padding-bottom: 160px;
+		}
+		@include max-screen($breakpoint-desktop){
+			padding-bottom: 150px;
+		}
+		@include max-screen($breakpoint-tablet){
+			padding-bottom: 100px;
+		}
+		@include max-screen($breakpoint-phone){
+			width: 100%;
+			padding-bottom: 70px;
+		}
+	}
+
+	&__content-text {
+		z-index: 1;
+		max-width: 515px;
+		text-align: right;
+		padding-right: 100px;
+		position: relative;
+		@include max-screen(1365px){
+			padding-right: 120px;
+		}
+		@include max-screen($breakpoint-phone){
+			text-align: left;
+		}
+
+		.button {
+			.theme-cyan & {
+				@extend .button--info;
+			}
+
+			.theme-purple & {
+				@extend .button--purple;
+			}
+		}
+	}
+
+	&__content-title {
+		@include display(h3);
+		text-align: left;
+		color: $color-black;
+		margin-bottom: 30px;
+	}
+
+	&__content-image {
+		position: absolute;
+		right: -65px;
+		top: 0;
+		@include max-screen(1365px){
+			right: -10px;
+		}
+		@include max-screen($breakpoint-desktop){
+			max-width: 250px;
+		}
+		@include max-screen($breakpoint-tablet){
+			max-width: 200px;
+		}
+		@include max-screen($breakpoint-phone){
+			max-width: 150px;
+		}
+
+		img {
+			max-width: 100%;
+		}
+	}
+}

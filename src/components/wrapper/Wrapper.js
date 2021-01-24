@@ -7,6 +7,7 @@ import Intro from '../intro/Intro';
 import PhotoContent from '../photo-content/Photo-content';
 import Benefit from '../benefit/Benefit';
 import Process from '../process/Process';
+import Testimonials from '../testimonials/Testimonials';
 import AboutIntro from '../about-intro/About-intro'
 import Review from '../review/Review'
 import Customer from '../customer/Customer';
@@ -22,10 +23,11 @@ class Wrapper extends Component {
                     <Route path="/vaste-telefonie" component={Intro} />
                     <Route path="/vaste-telefonie" component={PhotoContent} />
                     <Route path="/vaste-telefonie" component={Benefit} />
+                    <Route path="/" component={Customer} />
+                    <Route path="/vaste-telefonie" component={Testimonials} />
                     <Route exact path="/" component={Process} />
                     <Route exact path="/" component={AboutIntro} />
                     <Route exact path="/" component={Review} />
-                    <Route exact path="/" component={Customer} />
                     <Route path="/" component={Footer} />
                 </Router>
             </div>
