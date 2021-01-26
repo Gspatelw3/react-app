@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import nl2br from 'react-nl2br';
+import CardProcess from '../card-process/Card-process'
 
 const processData = [
     {
@@ -9,7 +11,7 @@ const processData = [
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         btnLabel: 'MEER INFO',
         btnLink: '#',
-        ColorStyle: 'cyan'
+        ColorStyle: ''
     },
     {
         id: 2,
@@ -33,21 +35,17 @@ const processData = [
     }
 ]
 
-const newData = processData.map((val, index) => {
+const newData = processData.map((val) => {
     return <li key={val.id} className="process__list-item">
-        <div className="process__list-block">
-            <div className="process__list-hexagone" style={{ 'backgroundImage': `url(${val.image})`}}>
-                <picture>
-                    <img src={val.icon} alt="" />
-                </picture>
-
-                <strong>{val.title.replace('\n',`<br>`)}</strong>
-            </div>
-
-            <p>{val.description}</p>
-
-            <a href={val.btnLink} className="button button--info">{val.btnLabel}</a>
-        </div>
+        <CardProcess 
+        unId={val.id}
+        exClass={(val.ColorStyle?` is-${val.ColorStyle}`:``)}
+        title={nl2br(val.title)} 
+        iconSrc={val.icon} 
+        imageSrc={val.image}
+        description={val.description} 
+        btnLink={val.btnLink}
+        btnLabel={val.btnLabel} />
     </li>
 });
 
