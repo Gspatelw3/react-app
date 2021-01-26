@@ -23,11 +23,11 @@ class Wrapper extends Component {
                     <Route path="/vaste-telefonie" component={Intro} />
                     <Route path="/vaste-telefonie" component={PhotoContent} />
                     <Route path="/vaste-telefonie" component={Benefit} />
-                    <Route path="/" component={Customer} />
-                    <Route path="/vaste-telefonie" component={Testimonials} />
                     <Route exact path="/" component={Process} />
                     <Route exact path="/" component={AboutIntro} />
                     <Route exact path="/" component={Review} />
+                    <Route path="/" component={Customer} />
+                    <Route path="/vaste-telefonie" component={Testimonials} />
                     <Route path="/" component={Footer} />
                 </Router>
             </div>
