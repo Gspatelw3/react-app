@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 class Header extends Component {
     componentDidMount() {
@@ -29,6 +29,12 @@ class Header extends Component {
             $('.header').toggleClass('header--open');
             $(this).toggleClass('is-active');
         });
+
+        $('#nav .header__mobile-link, #nav .header__mobile-navlink').click(function(){
+            $('#nav').fadeOut();
+            $('.js-menu-toggle, body, html').removeClass('is-active');
+            $('.header').removeClass('header--open');
+        })
     }
 
     render() {
@@ -41,14 +47,14 @@ class Header extends Component {
 
                 <div className="header__menu">
                     <ul className="header__menu-list">
-                        <li className="header__menu-item">
-                            <Link to="/vaste-telefonie" className="header__menu-link">Vaste telefonie</Link>
+                        <li className={`header__menu-item`}>
+                            <NavLink to="/vaste-telefonie" className="header__menu-link" activeClassName="is-active">Vaste telefonie</NavLink>
                         </li>
                         <li className="header__menu-item">
-                            <Link to="/mobiele-telefonie" className="header__menu-link">Mobiele telefonie</Link>
+                            <NavLink to="/mobiele-telefonie" className="header__menu-link" activeClassName="is-active">Mobiele telefonie</NavLink>
                         </li>
                         <li className="header__menu-item">
-                            <Link to="/internet" className="header__menu-link">Internet</Link>
+                            <NavLink to="/internet" className="header__menu-link" activeClassName="is-active">Internet</NavLink>
                         </li>
                     </ul>
 
@@ -75,25 +81,26 @@ class Header extends Component {
 
                     <ul className="header__mobile-list">
                         <li className="header__mobile-item">
-                            <a className="header__mobile-link" href="#">Vaste telefonie</a>
+                            <NavLink to="/vaste-telefonie" className="header__mobile-link" activeClassName="is-active">Vaste telefonie</NavLink>
                         </li>
                         <li className="header__mobile-item">
-                            <a className="header__mobile-link" href="#">Mobiele telefonie</a>
+                            <NavLink to="/mobiele-telefonie" className="header__mobile-link" activeClassName="is-active">Mobiele telefonie</NavLink>
                         </li>
                         <li className="header__mobile-item">
-                            <a className="header__mobile-link" href="#">Internet</a>
+                            <NavLink to="/internet" className="header__mobile-link" activeClassName="is-active">Internet</NavLink>
                         </li>
                     </ul>
 
                     <a href="#" className="button button--sm button--secondary">Vraag offerte aan</a><br />
 
-                    <a className="header__mobile-tel" href="tel:+31 (0)77 206 63 00"><i className="icon-tel"></i> +31 (0)77 206 63
-				00</a>
+                    <a className="header__mobile-tel" href="tel:+31 (0)77 206 63 00">
+                        <i className="icon-tel"></i> +31 (0)77 206 63 00
+                    </a>
 
                     <div className="header__mobile-wrap">
                         <ul className="header__mobile-nav">
                             <li className="header__mobile-navitem">
-                                <a href="#" className="header__mobile-navlink">Over ons</a>
+                                <Link to="/over-ons" className="header__mobile-navlink">Over ons</Link>
                             </li>
                             <li className="header__mobile-navitem">
                                 <a href="#" className="header__mobile-navlink">Ons team</a>

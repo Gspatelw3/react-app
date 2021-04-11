@@ -151,7 +151,7 @@
 	&__menu-link {
 		color: $color-white;
 		font-weight: 700;
-		display: block;
+        display: block;
 		line-height: 1.2;
 		position: relative;
 
@@ -489,13 +489,6 @@
 		}
 
 		&:before {
-			@include max-screen($breakpoint-tablet) {
-				opacity: 0;
-				visibility: hidden;
-			}
-		}
-
-		.header__logo {
 			@include max-screen($breakpoint-tablet) {
 				opacity: 0;
 				visibility: hidden;
