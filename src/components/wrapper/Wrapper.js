@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { render } from "react-dom";
-import { HashRouter as Router, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Route } from "react-router-dom";
 import Header from '../header/Header';
 import Banner from '../banner/Banner';
 import Intro from '../intro/Intro';

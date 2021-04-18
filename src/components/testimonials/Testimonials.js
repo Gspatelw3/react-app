@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import $ from 'jquery';
-import slick from 'slick-carousel';
+import { Link } from 'react-router-dom';
+import 'slick-carousel';
 
 class Testimonials extends Component {
     componentDidMount() {
@@ -39,7 +40,7 @@ class Testimonials extends Component {
                     <div className="testimonials__content-text">
                         <div className="testimonials__content-title">Ook het maximale uit uw zakelijke telefonie halen?</div>
 
-                        <a href="#" className="button">DIRECT AANVRAGEN</a>
+                        <Link to="#" className="button">DIRECT AANVRAGEN</Link>
                     </div>
 
                     <div className="testimonials__content-image">

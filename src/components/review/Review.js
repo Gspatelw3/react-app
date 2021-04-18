@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
-import slick from 'slick-carousel';
+import 'slick-carousel';
 
 class Review extends Component {
      componentDidMount() {

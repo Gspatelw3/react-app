@@ -68,7 +68,7 @@ class Header extends Component {
                     </ul>
 
                     <div className="header__menu-btn">
-                        <a href="#" className="button button--arrow">offerte aanvragen</a>
+                        <Link to="#" className="button button--arrow">offerte aanvragen</Link>
                     </div>
                 </div>
 
@@ -91,7 +91,7 @@ class Header extends Component {
                         </li>
                     </ul>
 
-                    <a href="#" className="button button--sm button--secondary">Vraag offerte aan</a><br />
+                    <Link to="#" className="button button--sm button--secondary">Vraag offerte aan</Link><br />
 
                     <a className="header__mobile-tel" href="tel:+31 (0)77 206 63 00">
                         <i className="icon-tel"></i> +31 (0)77 206 63 00
@@ -103,10 +103,10 @@ class Header extends Component {
                                 <Link to="/over-ons" className="header__mobile-navlink">Over ons</Link>
                             </li>
                             <li className="header__mobile-navitem">
-                                <a href="#" className="header__mobile-navlink">Ons team</a>
+                                <Link to="#" className="header__mobile-navlink">Ons team</Link>
                             </li>
                             <li className="header__mobile-navitem">
-                                <a href="#" className="header__mobile-navlink">Cases</a>
+                                <Link to="#" className="header__mobile-navlink">Cases</Link>
                             </li>
                         </ul>
 
@@ -117,9 +117,9 @@ class Header extends Component {
                         </div>
                     </div>
 
-                    <a href="#" className="header__mobile-logo">
+                    <Link to="#" className="header__mobile-logo">
                         <img src={process.env.PUBLIC_URL + '/logo-alt.svg'} alt="" />
-                    </a>
+                    </Link>
                 </div>
             </header>
         )
